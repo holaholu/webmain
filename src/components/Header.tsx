@@ -91,7 +91,7 @@ export const Header: React.FC = () => {
             }}
           >
             <Avatar
-              src="/profile.jpeg"
+              src={`${process.env.PUBLIC_URL}/profile.jpeg`}
               alt="Ola Adisa"
               sx={{
                 width: '100%',
