@@ -1,4 +1,5 @@
 import { Project } from "../types/project";
+import { getAssetPath } from "../utils/assetPath";
 
 export const projects: Project[] = [
   {
@@ -8,7 +9,7 @@ export const projects: Project[] = [
     longDescription: 'A comprehensive business analytics dashboard showcasing various data visualization techniques using D3.js and React. The dashboard includes interactive charts for performance metrics, activity trends, and key business indicators. Features responsive design with grid and expanded views.',
     category: 'Frontend',
     techStack: ['React', 'TypeScript', 'JavaScript'],
-    imageUrl: '/webmain/images/projects/dashboard-preview.png',
+    imageUrl: getAssetPath('images/projects/dashboard-preview.png'),
     liveUrl: 'https://leafy-chaja-26f1d6.netlify.app/',
     githubUrl: 'https://github.com/holaholu/business_dashboard',
     features: [
