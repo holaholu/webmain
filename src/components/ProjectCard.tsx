@@ -7,7 +7,7 @@ import {
   Chip,
   Stack,
   Box,
-  IconButton,
+  Button,
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -67,24 +67,46 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           />
           ))}
         </Stack>
-        <Box sx={{ mt: 'auto' }}>
+        <Box sx={{ mt: 'auto', display: 'flex', gap: 2 }}>
           {project.githubUrl && (
-            <IconButton
+            <Button
+              variant="outlined"
+              startIcon={<GitHubIcon />}
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              size="small"
+              sx={{
+                color: '#0f0',
+                borderColor: '#0f0',
+                '&:hover': {
+                  borderColor: '#0f0',
+                  backgroundColor: 'rgba(0, 255, 0, 0.1)'
+                }
+              }}
             >
-              <GitHubIcon />
-            </IconButton>
+              View on GitHub
+            </Button>
           )}
           {project.liveUrl && (
-            <IconButton
+            <Button
+              variant="outlined"
+              startIcon={<LanguageIcon />}
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
+              size="small"
+              sx={{
+                color: '#0f0',
+                borderColor: '#0f0',
+                '&:hover': {
+                  borderColor: '#0f0',
+                  backgroundColor: 'rgba(0, 255, 0, 0.1)'
+                }
+              }}
             >
-              <LanguageIcon />
-            </IconButton>
+              View Live
+            </Button>
           )}
         </Box>
       </CardContent>
