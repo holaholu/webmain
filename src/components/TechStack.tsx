@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Paper, Grid, GridProps } from '@mui/material';
+import { Box, Container, Typography, Paper } from '@mui/material';
 import { keyframes } from '@mui/system';
 
 const glowAnimation = keyframes`
