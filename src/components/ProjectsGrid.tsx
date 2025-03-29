@@ -43,7 +43,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: 4, mt: 4 }}>
         <Typography variant="h4" component="h2" gutterBottom>
           Projects
         </Typography>

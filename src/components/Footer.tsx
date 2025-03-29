@@ -55,9 +55,9 @@ export const Footer: React.FC = () => {
                 fontFamily: 'monospace',
               }}
             >
-              This website is powered by:
+              This Page is powered by:
             </Typography>
-            {['React', 'TypeScript', 'HTML', 'CSS'].map((tech) => (
+            {['React', 'TypeScript', 'Material-UI', 'HTML', 'CSS','Github Pages'].map((tech) => (
               <Typography
                 key={tech}
                 component="span"

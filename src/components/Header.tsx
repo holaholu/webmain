@@ -1,3 +1,18 @@
+/**
+ * Header Component
+ * 
+ * A Matrix-themed header component that serves as the main introduction section
+ * of the portfolio website. Features a professional photo, name, title, and
+ * social media links with a cyberpunk-inspired design.
+ * 
+ * Key Features:
+ * - Matrix-style glowing text animation
+ * - Professional photo with Matrix border effect
+ * - Social media links (GitHub, LinkedIn)
+ * - Contact button that opens a dialog
+ * - Responsive design for all screen sizes
+ */
+
 import React, { useState } from 'react';
 import {
   Box,
@@ -12,6 +27,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { keyframes } from '@mui/system';
 import { Contact } from './Contact';
 
+// Matrix-style glowing text animation for the developer title
 const matrixAnimation = keyframes`
   0% {
     text-shadow: 0 0 1px #0f0;
@@ -25,6 +41,7 @@ const matrixAnimation = keyframes`
 `;
 
 export const Header: React.FC = () => {
+  // State to control the visibility of the contact dialog
   const [contactOpen, setContactOpen] = useState(false);
   return (
     <Box
@@ -46,6 +63,8 @@ export const Header: React.FC = () => {
         }
       }}
     >
+
+
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -113,7 +132,7 @@ export const Header: React.FC = () => {
                 mb: 2,
               }}
             >
-              OLA ADISA
+              Ola Adisa
             </Typography>
             <Typography
               variant="h6"
@@ -124,16 +143,17 @@ export const Header: React.FC = () => {
                 mb: 2,
               }}
             >
-              Software Developer
+              Developer
             </Typography>
             <Box sx={{ 
               display: 'flex',
               gap: 2,
               width: '100%',
-              justifyContent: { xs: 'center', md: 'space-between' },
+              justifyContent: 'space-between',
               alignItems: 'center'
             }}>
-              <IconButton
+              <Box sx={{ display: 'flex', gap: 2, pl: 0 }}>
+                <IconButton
                 component={Link}
                 href="https://github.com/holaholu"
                 target="_blank"
@@ -167,27 +187,26 @@ export const Header: React.FC = () => {
               >
                 <LinkedInIcon />
               </IconButton>
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <IconButton
-                  onClick={() => setContactOpen(true)}
-                  sx={{
-                    color: '#0f0',
-                    border: '1px solid #0f0',
-                    borderRadius: '8px',
-                    padding: '8px 16px',
-                    '&:hover': {
-                      bgcolor: 'rgba(0,255,0,0.1)',
-                    },
-                    '& .MuiTypography-root': {
-                      ml: 1,
-                    },
-                  }}
+              </Box>
+              <IconButton
+                onClick={() => setContactOpen(true)}
+                sx={{
+                  color: '#0f0',
+                  border: '1px solid #0f0',
+                  borderRadius: '8px',
+                  padding: '8px 16px',
+                  '&:hover': {
+                    bgcolor: 'rgba(0,255,0,0.1)',
+                  },
+                  '& .MuiTypography-root': {
+                    ml: 1,
+                  },
+                }}
               >
                 <Typography variant="button" sx={{ fontFamily: 'monospace' }}>
-                  Contact
+                  Get in touch
                 </Typography>
               </IconButton>
-              </Box>
             </Box>
           </Box>
         </Box>

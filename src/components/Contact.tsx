@@ -1,3 +1,19 @@
+/**
+ * Contact Form Component
+ * 
+ * A Matrix-themed contact form dialog that allows visitors to send messages
+ * directly through their default email client. Features a clean, cyberpunk-inspired
+ * design consistent with the portfolio's theme.
+ * 
+ * Key Features:
+ * - Name, email, and message fields
+ * - Form validation
+ * - Auto-generated email using mailto protocol
+ * - Matrix-style visual effects
+ * - Form state persistence handling
+ * - Responsive design
+ */
+
 import React, { useState } from 'react';
 import {
   Dialog,
@@ -11,18 +27,41 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+/**
+ * Props for the Contact component
+ * @property {boolean} open - Controls the visibility of the dialog
+ * @property {function} onClose - Callback function to close the dialog
+ */
 interface ContactProps {
   open: boolean;
   onClose: () => void;
 }
 
 export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
+  // State to manage form input values
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
+  /**
+   * Resets the form to its initial state
+   * Called after successful submission or when closing the dialog
+   */
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
+
+  /**
+   * Handles form submission
+   * Creates a mailto link with the form data and opens the user's email client
+   * @param {React.FormEvent} e - The form submission event
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Create mailto link with form data
@@ -31,13 +70,17 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
     window.location.href = `mailto:olaoluhimself@yahoo.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
+    resetForm();
     onClose();
   };
 
   return (
     <Dialog
       open={open}
-      onClose={onClose}
+      onClose={() => {
+        resetForm();
+        onClose();
+      }}
       maxWidth="sm"
       fullWidth
       PaperProps={{
