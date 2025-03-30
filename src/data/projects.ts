@@ -3,6 +3,29 @@ import { getAssetPath } from "../utils/assetPath";
 
 export const projects: Project[] = [
   {
+    id: 'url-shortener',
+    title: 'URL Shortener',
+    description: 'A simple and efficient URL shortener service built with Flask and Redis. Features modern UI with Tailwind CSS and real-time validation.',
+    longDescription: 'A URL shortening service that transforms long URLs into concise, validated links. Features include duplicate URL detection, Redis for fast storage and retrieval, modern responsive UI with Tailwind CSS, and comprehensive error handling.',
+    category: 'Backend',
+    techStack: ['Python', 'Flask', 'Redis', 'Tailwind CSS'],
+    imageUrl: getAssetPath('images/projects/url-shortener.png'),
+    liveUrl: 'https://tiny-h4p2.onrender.com/',
+    githubUrl: 'https://github.com/holaholu/url_shortener',
+    features: [
+      'Shorten long URLs to manageable links',
+      'Modern, responsive UI with Tailwind CSS',
+      'Redis for fast and efficient storage',
+      'Copy-to-clipboard functionality',
+      'Input validation and error handling',
+      'Duplicate URL detection'
+    ],
+    startDate: '2025-03-30',
+    endDate: '2025-03-30',
+    highlighted: true,
+    inProgress: false
+  },
+  {
     id: 'business-dashboard',
     title: 'Business Data Dashboard',
     description: 'Interactive data visualization dashboard built with React and D3.js. Features multiple chart types including radar charts, line graphs, and bar charts.',

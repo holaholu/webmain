@@ -19,7 +19,9 @@ export type TechStack =
   | 'Git'
   | 'Microservices'
   | 'CI/CD'
-  | 'Serverless';
+  | 'Serverless'
+  | 'Redis'
+  | 'Tailwind CSS';
 
 export type ProjectCategory =
   | 'Frontend'
