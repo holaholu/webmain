@@ -12,6 +12,7 @@ import {
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import { Project } from '../types/project';
+import { themeColors } from '../theme';
 
 interface ProjectCardProps {
   project: Project;
@@ -25,14 +26,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         display: 'flex',
         flexDirection: 'column',
         transition: 'all 0.3s ease',
-        background: 'rgba(0, 17, 0, 0.9)',
-        border: '1px solid #0f0',
+        background: themeColors.background,
+        border: `1px solid ${themeColors.border}`,
         backdropFilter: 'blur(5px)',
         '&:hover': {
           transform: 'scale(1.02)',
-          boxShadow: '0 0 20px rgba(0,255,0,0.3)',
+          boxShadow: `0 0 20px ${themeColors.primaryLight}`,
           '& .MuiChip-root': {
-            backgroundColor: 'rgba(0,255,0,0.2)',
+            backgroundColor: themeColors.primaryLighter,
           },
         },
       }}
@@ -59,9 +60,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             label={tech}
             size="small"
             sx={{
-              backgroundColor: 'rgba(0,255,0,0.1)',
-              color: '#0f0',
-              border: '1px solid #0f0',
+              backgroundColor: themeColors.primaryLight,
+              color: themeColors.text,
+              border: `1px solid ${themeColors.border}`,
               transition: 'all 0.3s ease',
             }}
           />
@@ -77,11 +78,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               size="small"
               sx={{
-                color: '#0f0',
-                borderColor: '#0f0',
+                color: themeColors.text,
+                borderColor: themeColors.border,
                 '&:hover': {
-                  borderColor: '#0f0',
-                  backgroundColor: 'rgba(0, 255, 0, 0.1)'
+                  borderColor: themeColors.border,
+                  backgroundColor: themeColors.primaryLight
                 }
               }}
             >
@@ -97,11 +98,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               size="small"
               sx={{
-                color: '#0f0',
-                borderColor: '#0f0',
+                color: themeColors.text,
+                borderColor: themeColors.border,
                 '&:hover': {
-                  borderColor: '#0f0',
-                  backgroundColor: 'rgba(0, 255, 0, 0.1)'
+                  borderColor: themeColors.border,
+                  backgroundColor: themeColors.primaryLight
                 }
               }}
             >

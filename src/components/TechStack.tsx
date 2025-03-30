@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Container, Typography, Paper } from '@mui/material';
 import { keyframes } from '@mui/system';
+import { themeColors } from '../theme/theme';
 
 const glowAnimation = keyframes`
-  0% { box-shadow: 0 0 5px #0f0; }
-  50% { box-shadow: 0 0 20px #0f0; }
-  100% { box-shadow: 0 0 5px #0f0; }
+  0% { box-shadow: 0 0 5px ${themeColors.primary}; }
+  50% { box-shadow: 0 0 20px ${themeColors.primary}; }
+  100% { box-shadow: 0 0 5px ${themeColors.primary}; }
 `;
 
 interface TechCategoryProps {
@@ -31,11 +32,11 @@ const TechCategory: React.FC<TechCategoryProps> = ({ title, items }) => (
       <Typography
         variant="h6"
         sx={{
-          color: '#0f0',
+          color: themeColors.primary,
           fontFamily: 'monospace',
           mb: 2,
           textAlign: 'center',
-          textShadow: '0 0 10px #0f0',
+          textShadow: `0 0 10px ${themeColors.primary}`,
         }}
       >
         {title}
@@ -52,7 +53,7 @@ const TechCategory: React.FC<TechCategoryProps> = ({ title, items }) => (
           <Typography
             key={item}
             sx={{
-              color: '#0f0',
+              color: themeColors.primary,
               fontFamily: 'monospace',
               fontSize: '0.9rem',
               padding: '4px 8px',
@@ -114,7 +115,7 @@ export const TechStack: React.FC = () => {
         <Typography
           variant="h4"
           sx={{
-            color: '#0f0',
+            color: themeColors.primary,
             fontFamily: 'monospace',
             textAlign: 'center',
             mb: 4,

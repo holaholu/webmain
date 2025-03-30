@@ -26,6 +26,7 @@ import {
   IconButton,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { themeColors } from '../theme';
 
 /**
  * Props for the Contact component
@@ -85,14 +86,14 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
       fullWidth
       PaperProps={{
         sx: {
-          bgcolor: 'rgba(0, 17, 0, 0.95)',
-          border: '1px solid #0f0',
+          bgcolor: 'rgba(0, 0, 0, 0.95)',
+          border: `1px solid ${themeColors.border}`,
           backdropFilter: 'blur(5px)',
-          boxShadow: '0 0 20px rgba(0,255,0,0.2)',
+          boxShadow: `0 0 20px ${themeColors.primaryLight}`,
         },
       }}
     >
-      <DialogTitle sx={{ color: '#0f0', fontFamily: 'monospace' }}>
+      <DialogTitle sx={{ color: themeColors.text, fontFamily: 'monospace' }}>
         Contact Me
         <IconButton
           onClick={onClose}
@@ -100,7 +101,7 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
             position: 'absolute',
             right: 8,
             top: 8,
-            color: '#0f0',
+            color: themeColors.primary,
           }}
         >
           <CloseIcon />
@@ -124,21 +125,21 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             sx={{
               '& .MuiOutlinedInput-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '& fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&:hover fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
               },
               '& .MuiInputLabel-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '&.Mui-focused': {
-                  color: '#0f0',
+                  color: themeColors.primary,
                 },
               },
             }}
@@ -151,21 +152,21 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             sx={{
               '& .MuiOutlinedInput-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '& fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&:hover fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
               },
               '& .MuiInputLabel-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '&.Mui-focused': {
-                  color: '#0f0',
+                  color: themeColors.primary,
                 },
               },
             }}
@@ -179,21 +180,21 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             sx={{
               '& .MuiOutlinedInput-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '& fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&:hover fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: '#0f0',
+                  borderColor: themeColors.primary,
                 },
               },
               '& .MuiInputLabel-root': {
-                color: '#0f0',
+                color: themeColors.primary,
                 '&.Mui-focused': {
-                  color: '#0f0',
+                  color: themeColors.primary,
                 },
               },
             }}
@@ -204,7 +205,7 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
         <Button
           onClick={onClose}
           sx={{
-            color: '#0f0',
+            color: themeColors.primary,
             borderColor: '#0f0',
             '&:hover': {
               borderColor: '#0f0',
@@ -219,7 +220,7 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
           onClick={handleSubmit}
           sx={{
             backgroundColor: 'rgba(0,255,0,0.2)',
-            color: '#0f0',
+            color: themeColors.primary,
             '&:hover': {
               backgroundColor: 'rgba(0,255,0,0.3)',
             },

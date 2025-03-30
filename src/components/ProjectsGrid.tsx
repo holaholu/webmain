@@ -8,6 +8,7 @@ import {
   TextField,
   InputAdornment,
 } from '@mui/material';
+import { themeColors } from '../theme/theme';
 
 import SearchIcon from '@mui/icons-material/Search';
 import { ProjectCard } from './ProjectCard';
@@ -57,16 +58,16 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
               '& .MuiTab-root': {
                 fontSize: '1.1rem',
                 fontFamily: 'monospace',
-                color: '#0f0',
+                color: themeColors.primary,
                 opacity: 0.7,
                 '&.Mui-selected': {
                   opacity: 1,
-                  textShadow: '0 0 10px #0f0',
+                  textShadow: `0 0 10px ${themeColors.primary}`,
                 },
               },
               '& .MuiTabs-indicator': {
-                backgroundColor: '#0f0',
-                boxShadow: '0 0 10px #0f0',
+                backgroundColor: themeColors.primary,
+                boxShadow: `0 0 10px ${themeColors.primary}`,
                 height: '3px',
               },
             }}

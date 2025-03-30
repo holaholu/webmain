@@ -3,6 +3,7 @@ import { Box, Container, Typography, Link, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import { themeColors } from '../theme/theme';
 
 export const Footer: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const Footer: React.FC = () => {
         py: 3,
         px: 2,
         backgroundColor: 'rgba(0, 17, 0, 0.9)',
-        borderTop: '1px solid #0f0',
+        borderTop: `1px solid ${themeColors.primary}`,
         position: 'relative',
         '&::before': {
           content: '""',
@@ -22,8 +23,8 @@ export const Footer: React.FC = () => {
           left: 0,
           right: 0,
           height: '1px',
-          background: 'linear-gradient(90deg, transparent, #0f0, transparent)',
-          boxShadow: '0 0 15px #0f0',
+          background: `linear-gradient(90deg, transparent, ${themeColors.primary}, transparent)`,
+          boxShadow: `0 0 15px ${themeColors.primary}`,
         },
       }}
     >
@@ -50,7 +51,7 @@ export const Footer: React.FC = () => {
             <Typography
               variant="body2"
               sx={{
-                color: '#0f0',
+                color: themeColors.primary,
                 opacity: 0.9,
                 fontFamily: 'monospace',
               }}
@@ -62,11 +63,11 @@ export const Footer: React.FC = () => {
                 key={tech}
                 component="span"
                 sx={{
-                  color: '#0f0',
+                  color: themeColors.primary,
                   fontFamily: 'monospace',
                   fontSize: '0.85rem',
                   padding: '2px 8px',
-                  border: '1px solid #0f0',
+                  border: `1px solid ${themeColors.primary}`,
                   borderRadius: '4px',
                   backgroundColor: 'rgba(0,255,0,0.1)',
                   transition: 'all 0.2s ease',
@@ -98,7 +99,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               size="small"
               sx={{
-                color: '#0f0',
+                color: themeColors.primary,
                 border: '1px solid #0f0',
                 borderRadius: '4px',
                 '&:hover': {
@@ -115,7 +116,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               size="small"
               sx={{
-                color: '#0f0',
+                color: themeColors.primary,
                 border: '1px solid #0f0',
                 borderRadius: '4px',
                 '&:hover': {
@@ -129,7 +130,7 @@ export const Footer: React.FC = () => {
               onClick={() => window.location.href = 'mailto:olaoluhimself@yahoo.com'}
               size="small"
               sx={{
-                color: '#0f0',
+                color: themeColors.primary,
                 border: '1px solid #0f0',
                 borderRadius: '4px',
                 '&:hover': {

@@ -62,7 +62,7 @@ export const MatrixBackground: React.FC = () => {
 
       // Set the style for Matrix characters
       // Using the iconic Matrix green (#0f0) and monospace font for authenticity
-      ctx.fillStyle = '#0f0';
+      ctx.fillStyle = '#FFD700';
       ctx.font = `${fontSize}px monospace`;
 
       // Process each column in the Matrix rain
