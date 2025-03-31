@@ -32,9 +32,7 @@ export type ProjectCategory =
   | 'Frontend'
   | 'Backend'
   | 'Full Stack'
-  | 'DevOps'
-  | 'Cloud'
-  | 'Mobile';
+  | 'Cloud & DevOps';
 
 export interface Project {
   id: string;
