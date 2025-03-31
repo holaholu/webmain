@@ -23,9 +23,7 @@ const categories: ProjectCategory[] = [
   "Frontend",
   "Backend",
   "Full Stack",
-  "DevOps",
-  "Cloud",
-  "Mobile",
+  "Cloud & DevOps",
 ];
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
