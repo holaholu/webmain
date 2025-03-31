@@ -3,9 +3,32 @@ import { getAssetPath } from "../utils/assetPath";
 
 export const projects: Project[] = [
   {
+    id: 'project-management-tool',
+    title: 'Project Management Tool',
+    description: 'A full-stack project management application built with the MERN stack featuring AI-powered risk analysis, real-time analytics, and team collaboration.',
+    longDescription: 'A comprehensive project management solution built with MongoDB, Express.js, React, and Node.js. Features include AI-powered risk analysis using GPT-4, D3.js data visualizations, task management, team collaboration, and real-time project analytics.',
+    category: 'Full Stack',
+    techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'D3.js', 'Material UI', 'Redux Toolkit'],
+    imageUrl: getAssetPath('images/projects/project-management-tool.png'),
+    liveUrl: 'https://project-management-tool-app-d826a567f678.herokuapp.com/',
+    githubUrl: 'https://github.com/holaholu/project_manager',
+    features: [
+      'AI-powered risk analysis with GPT-4',
+      'Interactive D3.js data visualizations',
+      'Real-time project analytics and insights',
+      'Team collaboration and task management',
+      'Modern Material-UI interface',
+      'TypeScript for enhanced type safety'
+    ],
+    startDate: '2025-03-30',
+    endDate: '2025-03-31',
+    highlighted: true,
+    inProgress: false
+  },
+  {
     id: 'url-shortener',
     title: 'URL Shortener',
-    description: 'A simple and efficient URL shortener service built with Flask and Redis. Features modern UI with Tailwind CSS and real-time validation.',
+    description: 'A simple and efficient URL shortener backend service built with Flask and Redis. Features modern UI with Tailwind CSS and real-time validation.',
     longDescription: 'A URL shortening service that transforms long URLs into concise, validated links. Features include duplicate URL detection, Redis for fast storage and retrieval, modern responsive UI with Tailwind CSS, and comprehensive error handling.',
     category: 'Backend',
     techStack: ['Python', 'Flask', 'Redis', 'Tailwind CSS'],

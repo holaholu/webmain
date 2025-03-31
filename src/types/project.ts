@@ -21,7 +21,12 @@ export type TechStack =
   | 'CI/CD'
   | 'Serverless'
   | 'Redis'
-  | 'Tailwind CSS';
+  | 'Tailwind CSS'
+  | 'Express'
+  | 'MongoDB'
+  | 'D3.js'
+  | 'Material UI'
+  | 'Redux Toolkit';
 
 export type ProjectCategory =
   | 'Frontend'

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from "react";
 import {
   Container,
   Typography,
@@ -7,37 +7,41 @@ import {
   Tab,
   TextField,
   InputAdornment,
-} from '@mui/material';
-import { themeColors } from '../theme/theme';
+} from "@mui/material";
+import { themeColors } from "../theme/theme";
 
-import SearchIcon from '@mui/icons-material/Search';
-import { ProjectCard } from './ProjectCard';
-import { Project, ProjectCategory } from '../types/project';
-import { motion } from 'framer-motion';
+import SearchIcon from "@mui/icons-material/Search";
+import { ProjectCard } from "./ProjectCard";
+import { Project, ProjectCategory } from "../types/project";
+import { motion } from "framer-motion";
 
 interface ProjectsGridProps {
   projects: Project[];
 }
 
 const categories: ProjectCategory[] = [
-  'Frontend',
-  'Backend',
-  'Full Stack',
-  'DevOps',
-  'Cloud',
-  'Mobile',
+  "Frontend",
+  "Backend",
+  "Full Stack",
+  "DevOps",
+  "Cloud",
+  "Mobile",
 ];
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
-  const [category, setCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [category, setCategory] = useState<string>("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
-      const matchesCategory = category === 'all' || project.category === category;
-      const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      const matchesCategory =
+        category === "all" || project.category === category;
+      const matchesSearch =
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.techStack.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()));
+        project.techStack.some((tech) =>
+          tech.toLowerCase().includes(searchQuery.toLowerCase())
+        );
       return matchesCategory && matchesSearch;
     });
   }, [projects, category, searchQuery]);
@@ -46,7 +50,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
     <Container maxWidth="lg">
       <Box sx={{ mb: 4, mt: 4 }}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Projects
+          Sample Projects
         </Typography>
         <Box sx={{ mb: 3 }}>
           <Tabs
@@ -55,20 +59,20 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
             variant="scrollable"
             scrollButtons="auto"
             sx={{
-              '& .MuiTab-root': {
-                fontSize: '1.1rem',
-                fontFamily: 'monospace',
+              "& .MuiTab-root": {
+                fontSize: "1.1rem",
+                fontFamily: "monospace",
                 color: themeColors.primary,
                 opacity: 0.7,
-                '&.Mui-selected': {
+                "&.Mui-selected": {
                   opacity: 1,
                   textShadow: `0 0 10px ${themeColors.primary}`,
                 },
               },
-              '& .MuiTabs-indicator': {
+              "& .MuiTabs-indicator": {
                 backgroundColor: themeColors.primary,
                 boxShadow: `0 0 10px ${themeColors.primary}`,
-                height: '3px',
+                height: "3px",
               },
             }}
           >
@@ -96,10 +100,10 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
       </Box>
       <Box
         sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexWrap: "wrap",
           gap: 3,
-          width: '100%'
+          width: "100%",
         }}
       >
         {filteredProjects.map((project, index) => (
@@ -107,11 +111,12 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
             key={project.id}
             sx={{
               width: {
-                xs: '100%',
-                sm: 'calc(50% - 24px)',
-                md: 'calc(33.333% - 24px)'
-              }
-            }}>
+                xs: "100%",
+                sm: "calc(50% - 24px)",
+                md: "calc(33.333% - 24px)",
+              },
+            }}
+          >
             <Box
               component={motion.div}
               initial={{ opacity: 0, y: 20 }}
