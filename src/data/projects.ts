@@ -3,6 +3,29 @@ import { getAssetPath } from "../utils/assetPath";
 
 export const projects: Project[] = [
   {
+    id: 'serverless-image-processor',
+    title: 'Serverless Image Processor',
+    description: 'A modern, serverless image processing application built with React and AWS Lambda. Features multiple image transformations, secure cloud storage, and global content delivery.',
+    longDescription: 'A cloud-native image processing solution leveraging AWS Lambda, S3, and CloudFront. Users can upload images and apply various transformations including size optimization, artistic effects (grayscale, sepia, blur, negative), all processed securely in the cloud with rate limiting and global content delivery.',
+    category: 'Cloud & DevOps',
+    techStack: ['React', 'TypeScript', 'AWS Lambda', 'Sharp.js', 'Chakra UI', 'AWS S3', 'CloudFront', 'Serverless Framework'],
+    imageUrl: getAssetPath('images/projects/serverless_img.png'),
+    liveUrl: 'https://d39tdha10id0k5.cloudfront.net',
+    githubUrl: 'https://github.com/holaholu/serverless_image_processor',
+    features: [
+      'Secure image upload to AWS S3',
+      'Multiple image transformation effects',
+      'Global content delivery via CloudFront',
+      'Rate limiting and usage tracking',
+      'Modern UI with Chakra components',
+      'Serverless architecture for scalability'
+    ],
+    startDate: '2025-04-01',
+    endDate: '2025-04-01',
+    highlighted: true,
+    inProgress: false
+  },
+  {
     id: 'project-management-tool',
     title: 'Project Management Tool',
     description: 'A full-stack project management application built with the MERN stack featuring AI-powered risk analysis, real-time analytics, and team collaboration.',
@@ -45,6 +68,29 @@ export const projects: Project[] = [
     ],
     startDate: '2025-03-30',
     endDate: '2025-03-30',
+    highlighted: true,
+    inProgress: false
+  },
+  {
+    id: 'ecommerce-dashboard',
+    title: 'E-commerce Dashboard',
+    description: 'A comprehensive e-commerce management dashboard built with React, TypeScript, and Redux. Features real-time analytics, product management, and order tracking.',
+    longDescription: 'A modern e-commerce dashboard application providing business insights and management tools. Built with React and TypeScript, it features interactive data visualizations using Recharts, state management with Redux Toolkit, and a responsive UI using Ant Design and Material-UI components.',
+    category: 'Frontend',
+    techStack: ['React', 'TypeScript', 'Redux Toolkit', 'Material UI', 'Node.js'],
+    imageUrl: getAssetPath('images/projects/ecommerce_dash.png'),
+    liveUrl: 'https://ecommerce-dash-psi.vercel.app/',
+    githubUrl: 'https://github.com/holaholu/ecommerce_dash',
+    features: [
+      'Real-time business analytics dashboard',
+      'Product inventory management',
+      'Order tracking and management',
+      'Customer data management',
+      'Interactive data visualizations',
+      'Responsive Material-UI interface'
+    ],
+    startDate: '2025-04-01',
+    endDate: '2025-04-01',
     highlighted: true,
     inProgress: false
   },

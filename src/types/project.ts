@@ -26,7 +26,13 @@ export type TechStack =
   | 'MongoDB'
   | 'D3.js'
   | 'Material UI'
-  | 'Redux Toolkit';
+  | 'Redux Toolkit'
+  | 'AWS Lambda'
+  | 'Sharp.js'
+  | 'Chakra UI'
+  | 'AWS S3'
+  | 'CloudFront'
+  | 'Serverless Framework';
 
 export type ProjectCategory =
   | 'Frontend'
